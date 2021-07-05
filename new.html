@@ -11,6 +11,8 @@
       font-weight: bold;
       font-size: xxx-large;
       text-align: center;
+      text-shadow: 4px 2px aqua;
+      border: 4px solid darkblue;
     }
 
     .middle {
@@ -18,9 +20,13 @@
       font-family: "JetBrains Mono",monospace;
     }
 
-    button {
+    button,input {
       font-size: medium;
       font-family: "JetBrains Mono",monospace;
+    }
+
+    footer {
+      padding: 100px;
     }
 
   </style>
@@ -29,13 +35,21 @@
 
 <section class="top">
   <h1>585</h1>
+  <code>The numbers you can trust!</code>
 </section>
 
 <div class="middle">
   <p> Welcome to the 585 website! I will first display all of my projects and goals here!</p>
   <hr>
-  <button name="proj">Projects</button> <button>Goals</button>
+  <form action="/projects">
+    <input type="submit" value="Projects">
+  </form>
+  <button>Goals</button>
 </div>
 
 </body>
+<footer>
+  <p>v0.04</p>
+  <p>Created by Joey585</p>
+</footer>
 </html>
