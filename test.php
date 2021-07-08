@@ -8,14 +8,18 @@
   $url = 'https://discordapp.com/api/webhooks/856791535022243870/5D16VP5AE9qpRCcxFWU1H9Afaae788xmhnAcXOmJpChsxljo9uC0iV6cKU9O3v1FtzGU';
 $headers = [ 'Content-Type: application/json; charset=utf-8' ];
 $POST = [ 'username' => 'Testing BOT', 'content' => $ip ];
+$json_data = json_encode([
+  // Message
+  "content" => "Testy",
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 
-/* $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($POST));
-$response   = curl_exec($ch); */
-
+$ch = curl_init( $url );
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt( $ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
+$response = curl_exec($ch);
+curl_close( $ch );
 ?>
