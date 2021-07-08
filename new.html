@@ -52,9 +52,17 @@
 <body>
 
 <section class="top">
-  <h1>585</h1>
+  <h1 onclick="secret()">585</h1>
   <code>The numbers you can trust!</code>
 </section>
+
+<script>
+  function secret() {
+    document.getElementById('d09k3').innerHTML = "<p><strong>Joey585 on top!</strong></p>"
+  }
+</script>
+
+
 
 <div class="middle">
   <p class="content"> Welcome to the 585 website! I will first display all of my projects and goals here!</p>
@@ -64,6 +72,6 @@
 </body>
 <footer>
   <p>v0.05</p>
-  <p>Created by Joey585</p>
+  <p id="d09k3">Created by Joey585</p>
 </footer>
 </html>
