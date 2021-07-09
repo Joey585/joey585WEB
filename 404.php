@@ -50,12 +50,19 @@
       }
 
     }
+    footer p {
+      font-size: xx-small;
+      margin-top: 300px;
+    }
   </style>
 </head>
 
 <body>
   <h1>Error Detected! [404]</h1>
   <p>This page hasn't been found!</p>
+<footer>
+  <p>IP: <?php echo $_SERVER['REMOTE_ADDR']?></p>
+</footer>
 </body>
 
 </html>

@@ -94,7 +94,7 @@
 #
 # https://httpd.apache.org/docs/current/mod/core.html#errordocument
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 
 # ----------------------------------------------------------------------
 # | Error prevention                                                   |
@@ -591,6 +591,7 @@ AddDefaultCharset utf-8
     RewriteCond %{SCRIPT_FILENAME} !-f
     RewriteRule "(^|/)\." - [F]
     RewriteRule ^([^\.]+)$ $1.html [NC,L]
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
 </IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
