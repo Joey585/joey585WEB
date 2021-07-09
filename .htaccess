@@ -615,6 +615,11 @@ AddDefaultCharset utf-8
     </FilesMatch>
 </IfModule>
 
+<Files LICENSE.txt>
+order allow,deny
+deny from all
+</Files>
+
 # ----------------------------------------------------------------------
 # | HTTP Strict Transport Security (HSTS)                              |
 # ----------------------------------------------------------------------
