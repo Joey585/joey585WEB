@@ -13,6 +13,10 @@
   <meta property="og:image" content="https://joey585.com/img/585.png">
   <meta property="og:description" content="The official 585 Website. The numbers you can trust!">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
   <link rel="manifest" href="site.webmanifest"/>
 
   <link rel="apple-touch-icon" href="favicon.ico">
@@ -43,9 +47,21 @@
     }
     a:hover {
       background-color: #2474ff;
+      cursor: url("cursor.png"), default;
     }
     h1 {
       border-radius: 30px;
+    }
+    * {
+      cursor: url("cursor.png"), default;
+    }
+    #update {
+      font-family: 'Montserrat', sans-serif;
+      color: #2474ff;
+      font-weight: bolder;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
     }
   </style>
 
@@ -67,6 +83,14 @@
       <br>
       <p>I have decided to show you my work on the page :)</p>
       <a href="/new">Current Progress</a>
+      <br>
+      <br>
+      <br>
+        <span style="border: solid 4px lightseagreen" id="update">
+          <strong>Update:</strong>
+          I am taking a bit off from working on the website.
+          I have summer school and I need to focus on that!
+        </span>
     </div>
 
 

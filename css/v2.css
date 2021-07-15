@@ -15,3 +15,9 @@ body {
 .bottom {
   margin-top: 250px;
 }
+#discord-icon {
+  cursor: pointer;
+}
+#discord-icon:focus {
+
+}
