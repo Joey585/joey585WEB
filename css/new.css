@@ -11,9 +11,10 @@ h1 {
   animation: crazy 3s infinite;
 }
 
-@keyframes crazy {
+/* (@keyframes crazy {
   50% {box-shadow: 1px 2px 3px blue}
-}
+} */
+
 .content {
   font-family: "JetBrains Mono", monospace;
   font-size: 14px;
