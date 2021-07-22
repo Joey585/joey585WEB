@@ -47,7 +47,7 @@ function test_input($data) {
   <input type="submit">
   <footer>
     <p>This login form is for testing at the moment. Have fun trying to mess it up!</p>
-    <a href="mailto:joey585@joey585.com">Report errors</a>
+    <a href="mailto:joeylieb@joey585.com">Report errors</a>
   </footer>
 </form>
 
