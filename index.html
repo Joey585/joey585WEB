@@ -37,11 +37,12 @@
 
  if (mobileCheck() === true) {
    alert('You are on mobile. Error\'s may occur during beta!')
+   document.getElementById('motto').style.animation = ''
+   document.getElementById('home-title').style.animation = ''
+   document.body.style.background = 'rgb(44,34,209)'
+   document.getElementById('motto').innerHTML = 'You are on phone.'
  }
-    /* document.getElementById('motto').style.animation = ''
-    document.getElementById('home-title').style.animation = ''
-    document.body.style.background = 'rgb(44,34,209)'
-    document.getElementById('motto').innerHTML = 'You are on phone.' */
+
 </script>
 <script>
   /* let backgroundImages = [
