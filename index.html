@@ -15,45 +15,59 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-
-  <link rel="manifest" href="site.webmanifest"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
   <link rel="apple-touch-icon" href="favicon.ico">
   <link rel="icon" href="favicon.ico" type="image/ico"/>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-  <link rel="stylesheet" href="css/v2.css">
+  <link rel="stylesheet" href="css/v2.css?v=2">
 
   <meta name="theme-color" content="#fafafa">
 
 
 </head>
 
-<body>
+<body onload="">
+<script>
+  /* let backgroundImages = [
+    'https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__480.jpg',
+    'https://media.istockphoto.com/photos/blue-abstract-background-or-texture-picture-id1138395421?k=6&m=1138395421&s=612x612&w=0&h=bJ1SRWujCgg3QWzkGPgaRiArNYohPl7-Wc4p_Fa_cyA=',
+    'https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg'
+  ];
+  function changeImage() {
+      document.body.style.cssText = `background-image: linear-gradient(to top, rgba(0,0,0,0.659), rgba(0,0,0,0.659)), url('${backgroundImages[Math.floor(Math.random() * 3)]}');`;
+  }
+
+   */
+</script>
   <section class="top">
-    <h1> 585 </h1>
-    <a href='/projects'>Projects</a>
-    <a href="/about">About Me</a>
-    <a href="/login.php">Login</a>
-    <a onclick="alert('coming soon')">Updates</a>
+    <div class="big">
+      <h1 class="home-title"> 585 </h1>
+    </div>
+    <p id="motto">The Numbers You Can Trust</p>
+    <br>
+    <div id="buttons-home">
+      <a href='/projects' class="button-home">Projects</a>
+      <a href="/about" class="button-home">About Me</a>
+      <a href="/login.php" class="button-home">Login</a>
+    </div>
     <br>
     <br>
     <br>
     <br>
     <div class="sorry">
-      <hr>
       <br>
       <label for="bar">585 Website Progress:</label>
-      <progress id="bar" value="47" max="100"></progress>
+      <progress id="bar" value="69" max="100"></progress>
       <p>
-        Doing some back-end work mostly.
+        Playing with the looks and fixing a lot of css!
       </p>
       <br>
       <br>
       <br>
       <br>
       <footer>
-        <p><small>Version: 0.10</small></p>
+        <p><small>Version: 0.12</small></p>
       </footer>
     </div>
 
