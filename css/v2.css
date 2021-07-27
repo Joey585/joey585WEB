@@ -35,9 +35,9 @@ body {
   margin: 10px;
 }
 .button-home:hover {
-  animation: buttonBigger 1s forwards;
+    animation: buttonBigger 1s forwards;
 }
-@keyframes buttonBigger {
+    @keyframes buttonBigger {
   0% {
     font-size: 20px;
   }
