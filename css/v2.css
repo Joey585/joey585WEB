@@ -1,52 +1,62 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: rgb(44,34,209);
-  background: linear-gradient(90deg, rgba(44,34,209,1) 0%, rgba(19,19,224,1) 28%, rgba(9,56,213,1) 43%, rgba(19,94,241,1) 72%, rgba(0,212,255,1) 100%);
 }
 
 .big {
-  font-size: 300px;
+  font-size: 100px;
   animation: size 5s forwards;
 }
-@keyframes size {
-  0% {font-size: 300px;}
-  50% {font-size: xxx-large;}
-  100% {font-size: xxx-large;}
-}
-
 .home-title {
   text-align: center;
   margin-top: 200px;
-  color: white;
   animation: colorChange 5s forwards;
+  color: black;
 }
 @keyframes colorChange {
   from {color: white;}
-  to {color: darkblue;}
+  to {color: black;}
 }
 
 #motto {
-  animation: motto 5s forwards;
-}
-@keyframes motto {
-  from {transform: translateX(0px)}
-  to {transform: translateX(680px)}
+  text-align: center;
 }
 
 .button-home {
-  color: black;
+  color: white;
   text-decoration: none;
-  border: solid dodgerblue 4px;
+  border: solid royalblue 4px;
   padding: 5px;
   border-radius: 10px;
-  background-color: dimgrey;
   margin: 10px;
 }
 .button-home:hover {
-  background-color: #cccccc;
+  animation: buttonBigger 1s forwards;
+}
+@keyframes buttonBigger {
+  0% {
+    font-size: 20px;
+  }
+  50% {
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end);
+    font-size: 20px;
+  }
+  100% {
+    font-size: 20px;
+  }
 }
 #buttons-home {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+footer {
+  color: white;
 }
