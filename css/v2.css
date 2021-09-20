@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: dimgrey;
+  background: rgb(44,34,209);
 }
 
 .big {
@@ -26,15 +26,37 @@ body {
   text-align: center;
 }
 
-nav > a {
+.button-home {
+  color: white;
   text-decoration: none;
-  margin-left: 20px;
-  color: black;
+  border: solid royalblue 4px;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
 }
-nav > strong {
-  font-size: x-large;
-  color: midnightblue;
+.button-home:hover {
+    animation: buttonBigger 1s forwards;
 }
-nav > a:hover {
+    @keyframes buttonBigger {
+  0% {
+    font-size: 20px;
+  }
+  50% {
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end);
+    font-size: 20px;
+  }
+  100% {
+    font-size: 20px;
+  }
+}
+#buttons-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
   color: white;
 }
