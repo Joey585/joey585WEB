@@ -7,3 +7,4 @@ dist
 login
 .htaccess
 home
+home/main.php

