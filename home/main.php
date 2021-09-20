@@ -56,19 +56,31 @@ $json_data = json_encode([
 
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 
-$ch = curl_init( $webhook );
-curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-curl_setopt( $ch, CURLOPT_POST, 1);
-curl_setopt( $ch, CURLOPT_POSTFIELDS, $json_data);
-curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt( $ch, CURLOPT_HEADER, 0);
-curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+  function _bot_detected() {
 
-$response = curl_exec( $ch );
-echo $response;
-// If you need to debug, or find out why you can't send message uncomment line below, and execute script.
-// echo $response;
-curl_close( $ch );
+    return (
+      isset($_SERVER['HTTP_USER_AGENT'])
+      && preg_match('/bot|crawl|slurp|spider|mediapartners/i', $_SERVER['HTTP_USER_AGENT'])
+    );
+  }
+
+  if (_bot_detected()) {
+    return;
+  } else {
+    $ch = curl_init( $webhook );
+    curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+    curl_setopt( $ch, CURLOPT_POST, 1);
+    curl_setopt( $ch, CURLOPT_POSTFIELDS, $json_data);
+    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt( $ch, CURLOPT_HEADER, 0);
+    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+
+    $response = curl_exec( $ch );
+    echo $response;
+    curl_close( $ch );
+  }
+
+
 
 ?>
 
